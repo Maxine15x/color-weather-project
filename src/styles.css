@@ -10,14 +10,6 @@ h1 {
 	margin-bottom: 0 auto;
 }
 
-h2 {
-	color: #6f4886;
-	font-size: 82px;
-	text-align: right;
-	padding: 10px 50px 5px 0;
-	margin: 0 auto;
-}
-
 li {
 	color: #d66b92;
 	font-size: 15px;
@@ -53,12 +45,23 @@ img {
 	);
 }
 
-.units {
+.weather-temperature {
 	color: #6f4886;
-	font-size: 30px;
+	text-align: right;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.temperature {
+	font-size: 82px;
+}
+
+.units {
 	position: relative;
-	top: -125px;
-	right: -97%;
+	font-size: 14px;
+	top: -45px;
+	left: -7px;
+	cursor: pointer;
 }
 
 .col {
