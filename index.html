@@ -20,20 +20,20 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
+    <div class="container">
     <div class="color-weather">
-      <h1 id="display-city">
-        Clearwater
-      </h1>
-      <h2>Tuesday 16:00</h2>
-      <form id="find-city">
-        <input type="search" 
-        placeholder="Search" 
+    <form id="find-city" class="mb-2">
+      <input type="search" 
+        placeholder="Search city" 
         autocomplete="off"
         autofocus="on"
         id="search-location" />
-        <input type="submit" value="🔍" />
+        <input type="submit" value="🔍" class="btn bg-gradient"/>
       </form>
-      
+      <h1 id="display-city">
+        Clearwater
+      </h1>
+      <h2 id="date">Tuesday 16:00</h2>
       <h3 id="temperature">86</h3>
       <span class="units"><small>°F</small></span>
 
@@ -44,8 +44,6 @@
           <li>Sunrise: 6:57am</li>
           <li>Sunset: 8:02pm</li>
       </ul>
-
-     <div class="container">
         <div class="row">
          <div class="col">
           <div class="card-title">
@@ -56,8 +54,7 @@
               <strong>86°</strong>
               <small>75°</small>
             </p>
-        </div>
-
+          </div>
           <div class="col">
               <div class="card-title">
             Tuesday
@@ -68,7 +65,6 @@
               <small>79°</small>
             </p>
           </div>
-
         <div class="col">
             <div class="card-title">
           Wednesday
@@ -79,7 +75,6 @@
             <small>73°</small>
           </p>
         </div>
-
         <div class="col">
           <div class="card-title">
           Thursday
@@ -90,7 +85,6 @@
             <small>76°</small>
           </p>
         </div>
-
         <div class="col">
             <div class="card-title">
           Friday
@@ -102,6 +96,7 @@
           </p>
         </div>
         <small><a href="https://github.com/Maxine15x/color-weather-project" target="_blank">Open-source code</a>, by Maxine Martinez</small>
+      </div>
       </div>
     <script src="src/index.js"></script>
   </body>

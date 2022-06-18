@@ -1,84 +1,84 @@
 h1 {
-  display: block;
-  color: rgb(14, 143, 168);
-  text-align: right;
-  font-size: 65px;
-  padding: 10px 0;
-  margin: 0 auto;
+	display: block;
+	color: rgb(14, 143, 168);
+	text-align: right;
+	font-size: 65px;
+	padding: 10px 0;
+	margin: 0 auto;
 }
 
 h2 {
-  display: block;
-  font-size: 18px;
-  text-align: right;
+	display: block;
+	font-size: 18px;
+	text-align: right;
 }
 
 h3 {
-  color: #6f4886;
-  font-size: 120px;
-  text-align: right;
-  padding: 10px 50px 5px 0;
-  margin: 0 auto;
+	color: #6f4886;
+	font-size: 120px;
+	text-align: right;
+	padding: 10px 50px 5px 0;
+	margin: 0 auto;
 }
 
 img {
-  display: block;
-  position: relative;
-  left: 45px;
+	display: block;
+	position: relative;
+	left: 45px;
 }
 
 .color-weather {
-  color: #1a2639;
+	color: #1a2639;
   max-width: 70%;
-  border-radius: 20px;
-  box-shadow: 5px 2px 2px #9adbe8;
-  margin: 20px auto;
-  padding: 20px;
-  font-family: "Ubuntu", sans-serif;
-  background: linear-gradient(
-    122.3deg,
-    rgb(111, 71, 133) 14.6%,
-    rgb(232, 129, 166) 29.6%,
-    rgb(237, 237, 183) 42.1%,
-    rgb(244, 166, 215) 56.7%,
-    rgb(154, 219, 232) 68.7%,
-    rgb(238, 226, 159) 84.8%
-  );
+	border-radius: 20px;
+	box-shadow: 5px 2px 2px #9adbe8;
+	margin: 20px auto;
+	padding: 20px;
+	font-family: "Ubuntu", sans-serif;
+	background: linear-gradient(
+		122.3deg,
+		rgb(111, 71, 133) 14.6%,
+		rgb(232, 129, 166) 29.6%,
+		rgb(237, 237, 183) 42.1%,
+		rgb(244, 166, 215) 56.7%,
+		rgb(154, 219, 232) 68.7%,
+		rgb(238, 226, 159) 84.8%
+	);
 }
 
 .units {
-  color: #6f4886;
-  font-size: 30px;
-  position: relative;
-  top: -125px;
-  right: -97%;
+	color: #6f4886;
+	font-size: 30px;
+	position: relative;
+	top: -125px;
+	right: -97%;
 }
 
 .col {
-  box-shadow: 0px 2px 2px 0px rgb(232, 129, 166);
-  border: 1px solid rgb(190, 61, 192);
-  border-radius: 10px;
+	box-shadow: 0px 2px 2px 0px rgb(232, 129, 166);
+	border: 1px solid rgb(190, 61, 192);
+	border-radius: 10px;
 }
 
 .temp-list {
-  color: #1a2639;
-  text-align: right;
-  list-style: none;
-  padding: 20px;
-  margin: 0 auto;
+	color: #1a2639;
+	text-align: right;
+	list-style: none;
+	padding: 20px;
+	margin: 0 auto;
 }
 
 .card-title {
-  color: #1a2639;
-  font-size: 20px;
-  text-align: center;
-  padding: 10px 0;
-  margin: 0 auto;
+	color: #1a2639;
+	font-size: 20px;
+	text-align: center;
+	padding: 10px 0;
+	margin: 0 auto;
 }
 
 .current-temp {
-  color: #1a2639;
-  font-size: 15px;
-  padding-top: 20px;
-  text-align: center;
+	color: #1a2639;
+	font-size: 15px;
+	padding-top: 20px;
+	text-align: center;
 }
