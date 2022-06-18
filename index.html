@@ -21,7 +21,6 @@
   </head>
   <body>
     <div class="container">
-    <div class="color-weather">
     <form id="find-city" class="mb-2">
       <input type="search" 
         placeholder="Search city" 
@@ -30,21 +29,22 @@
         id="search-location" />
         <input type="submit" value="🔍" class="btn bg-gradient"/>
       </form>
-      <h1 id="display-city">
-        Clearwater
-      </h1>
-      <h2 id="date">Tuesday 16:00</h2>
-      <h3 id="temperature">86</h3>
+      <h1 id="display-city">Clearwater</h1>
+      <div class="row">
+        <div class="col-12">
+      <h2 id="temperature">86</h2>
       <span class="units"><small>°F</small></span>
-
-      <ul class="temp-list">
-          <li>Percipitation: 2%</li>
-          <li>Humidity: 66%</li>
-          <li>Wind: 10 mph</li>
-          <li>Sunrise: 6:57am</li>
-          <li>Sunset: 8:02pm</li>
+      </div>
+      <div class="description">
+        <div class="col-11">
+          <ul>
+        <li>Last Updated:<span id="date"></span></li>
+          <li>Percipitation: <span id="percipitation"></span>%</li>
+          <li>Humidity: <span id="humidity"></span>%</li>
+          <li>Wind: <span id="wind"></span> km/h</li>
       </ul>
-        <div class="row">
+      </div>
+      </div>
          <div class="col">
           <div class="card-title">
             Monday
@@ -96,7 +96,6 @@
           </p>
         </div>
         <small><a href="https://github.com/Maxine15x/color-weather-project" target="_blank">Open-source code</a>, by Maxine Martinez</small>
-      </div>
       </div>
     <script src="src/index.js"></script>
   </body>
