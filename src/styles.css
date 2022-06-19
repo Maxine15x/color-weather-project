@@ -62,7 +62,7 @@ li:first-letter {
 	position: relative;
 	font-size: 14px;
 	top: -45px;
-	left: -7px;
+	left: 7px;
 	cursor: pointer;
 }
 

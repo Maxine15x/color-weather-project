@@ -1,5 +1,4 @@
-function currentDate(timestamp) {
-	let date = new Date(timestamp);
+function currentDate(date) {
 	let hours = date.getHours();
 	if (hours < 10) {
 		hours = `0${hours}`;
@@ -9,6 +8,7 @@ function currentDate(timestamp) {
 		minutes = `0${minutes}`;
 	}
 
+	let eachDay = date.getDay();
 	let days = [
 		"Sunday",
 		"Monday",
@@ -18,27 +18,29 @@ function currentDate(timestamp) {
 		"Friday",
 		"Saturday",
 	];
-	let day = days[date.eachDay()];
+	let day = days[eachDay];
 	return `${day} ${hours}:${minutes}`;
 }
 
-function currrentDay(timestamp) {
-	console.log(date);
-	let date = new Date(timestamp * 1000);
-	let day = date.eachDay();
-	let days = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
-
-	return days[day];
-}
-
 function showTemperature(response) {
-  let forecast = response.data.daily;
-	let temperature = Math.round(response.data.main.temp);
-	let city = response.data.name;
-	let h1 = document.querySelector("h1");
-	h1.innerHTML = `${city}`;
-	let h3 = document.querySelector("h3");
-	h3.innerHTML = `${temperature}`;
+	console.log(response);
+	let temperatureType = document.querySelector("#temperature");
+	let cityType = document.querySelector("#display-city");
+	let descriptionType = document.querySelector("#description");
+	let humidityType = document.querySelector("#humidity");
+	let windType = document.querySelector("#wind");
+	let iconType = document.querySelector("#icon");
+
+	temperatureType.innerHTML = Math.round(response.data.main.temp);
+	cityType.innerHTML = response.data.name;
+	descriptionType.innerHTML = response.data.weather[0].description;
+	humidityType.innerHTML = response.data.main.humidity;
+	windType.innerHTML = Math.round(response.data.wind.speed);
+	iconType.setAttribute(
+		"src",
+		`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+	);
+	iconType.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -49,11 +51,26 @@ function searchCity(city) {
 
 function searchEngine(event) {
 	event.preventDefault();
-	let cityLocation = document.querySelector("#search-location");
-	search(cityLocation.value);
+	let city = document.querySelector("#search-location").value;
+	searchCity(city);
 }
 
-let searchInput = document.querySelector("#find-city");
-searchInput.addEventListener("submit", searchEngine);
+function searchLocation(position) {
+	let apiKey = "769668820f2d4467990d718542c608e8";
+	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+	axios.get(apiUrl).then(displayWeatherCondition);
+}
 
-search("Clearwater");
+function currentLocation(event) {
+	event.preventDefault();
+	navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let dateType = document.querySelector("#date");
+let currentTime = new Date();
+dateType.innerHTML = currentDate(currentTime);
+
+let searchForm = document.querySelector("#find-city");
+searchForm.addEventListener("submit", searchEngine);
+
+searchCity("Clearwater");
