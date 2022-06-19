@@ -23,7 +23,6 @@ function currentDate(date) {
 }
 
 function showTemperature(response) {
-	console.log(response);
 	let temperatureType = document.querySelector("#temperature");
 	let cityType = document.querySelector("#display-city");
 	let descriptionType = document.querySelector("#description");
@@ -64,6 +63,18 @@ function searchLocation(position) {
 function currentLocation(event) {
 	event.preventDefault();
 	navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+function convertFahrenheit(event) {
+	event.preventDefault();
+	let temperatureElement = document.querySelector("#temperature");
+	temperatureElement.innerHTML = 70;
+}
+
+function convertCelsius(event) {
+	event.preventDefault();
+	let temperatureElement = document.querySelector("#temperature");
+	temperatureElement.innerHTML = 20;
 }
 
 let dateType = document.querySelector("#date");
