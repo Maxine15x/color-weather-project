@@ -32,6 +32,7 @@ function currrentDay(timestamp) {
 }
 
 function showTemperature(response) {
+  let forecast = response.data.daily;
 	let temperature = Math.round(response.data.main.temp);
 	let city = response.data.name;
 	let h1 = document.querySelector("h1");

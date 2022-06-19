@@ -22,12 +22,6 @@ li:first-letter {
 	text-transform: capitalize;
 }
 
-img {
-	display: block;
-	position: relative;
-	left: 45px;
-}
-
 .container {
 	max-width: 70%;
 	margin: 20px auto;
@@ -52,11 +46,19 @@ img {
 	margin: 0 auto;
 }
 
+.weather-temperature img {
+	display: inline-block;
+	position: relative;
+	margin-right: -15px;
+	top: -23px;
+}
+
 .temperature {
 	font-size: 82px;
 }
 
 .units {
+	color: #6f4886;
 	position: relative;
 	font-size: 14px;
 	top: -45px;
@@ -67,20 +69,26 @@ img {
 .col {
 	box-shadow: 0px 2px 2px 0px rgb(232, 129, 166);
 	border: 1px solid rgb(190, 61, 192);
-	border-radius: 10px;
+	border-radius: 18px;
+}
+
+.col img {
+	display: inline-block;
+	position: relative;
+	left: 6px;
 }
 
 .card-title {
-	color: #1a2639;
+	color: #3f3b3b;
 	font-size: 20px;
 	text-align: center;
-	padding: 10px 0;
 	margin: 0 auto;
+	padding: 8px;
 }
 
 .current-temp {
-	color: #1a2639;
+	color: #3f3b3b;
 	font-size: 15px;
-	padding-top: 20px;
+	padding: 2px 8px 10px 8px;
 	text-align: center;
 }
