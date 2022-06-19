@@ -23,14 +23,16 @@ function currentDate(date) {
 }
 
 function showTemperature(response) {
-	let temperatureType = document.querySelector("#temperature");
+	let temperatureElement = document.querySelector("#temperature");
 	let cityType = document.querySelector("#display-city");
 	let descriptionType = document.querySelector("#description");
 	let humidityType = document.querySelector("#humidity");
 	let windType = document.querySelector("#wind");
 	let iconType = document.querySelector("#icon");
 
-	temperatureType.innerHTML = Math.round(response.data.main.temp);
+	celsiusTemperature = response.data.main.temp;
+
+	temperatureElement.innerHTML = Math.round(celsiusTemperature);
 	cityType.innerHTML = response.data.name;
 	descriptionType.innerHTML = response.data.weather[0].description;
 	humidityType.innerHTML = response.data.main.humidity;
@@ -51,7 +53,7 @@ function searchCity(city) {
 function searchEngine(event) {
 	event.preventDefault();
 	let city = document.querySelector("#search-location").value;
-	searchCity(city);
+	searchCity(city.value);
 }
 
 function searchLocation(position) {
@@ -65,16 +67,24 @@ function currentLocation(event) {
 	navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function convertCelsius(event) {
+	event.preventDefault();
+	celsiusLink.classList.add("active");
+	fahrenheitLink.classList.remove("active");
+	let temperatureElement = document.querySelector("#temperature");
+	temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 function convertFahrenheit(event) {
 	event.preventDefault();
 	let temperatureElement = document.querySelector("#temperature");
-	temperatureElement.innerHTML = 70;
-}
 
-function convertCelsius(event) {
-	event.preventDefault();
-	let temperatureElement = document.querySelector("#temperature");
-	temperatureElement.innerHTML = 20;
+	celsiusLink.classList.remove("active");
+	fahrenheitLink.classList.add("active");
+	let fahrenheitTemperature = ((celsiusTemperature - 32) * 5) / 9;
+	temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let dateType = document.querySelector("#date");
@@ -83,5 +93,11 @@ dateType.innerHTML = currentDate(currentTime);
 
 let searchForm = document.querySelector("#find-city");
 searchForm.addEventListener("submit", searchEngine);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertCelsius);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertFahrenheit);
 
 searchCity("Clearwater");
