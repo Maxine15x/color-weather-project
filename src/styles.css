@@ -6,7 +6,7 @@ h1 {
 	color: rgb(14, 143, 168);
 	line-height: 50px;
 	text-align: right;
-	font-size: 62px;
+	font-size: 68px;
 	margin-bottom: 0 auto;
 }
 
@@ -49,8 +49,8 @@ li:first-letter {
 .weather-temperature img {
 	display: inline-block;
 	position: relative;
-	margin-right: -15px;
-	top: -23px;
+	margin-right: -10px;
+	top: -22px;
 }
 
 .weather-temperature .active:hover {
@@ -65,8 +65,8 @@ li:first-letter {
 	color: #6f4886;
 	position: relative;
 	font-size: 14px;
-	top: -42px;
-	left: 7px;
+	top: -44px;
+	left: 8px;
 	cursor: default;
 }
 
@@ -77,9 +77,9 @@ li:first-letter {
 }
 
 .col img {
-	display: inline-block;
+	display: block;
 	position: relative;
-	left: 6px;
+	left: 32px;
 }
 
 .card-title {
