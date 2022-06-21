@@ -83,7 +83,7 @@ function convertFahrenheit(event) {
 
 	celsiusLink.classList.remove("active");
 	fahrenheitLink.classList.add("active");
-	let fahrenheitTemperature = celsiusTemperature - (32 * 9) / 5;
+	let fahrenheitTemperature = ((celsiusTemperature - 32) * 5) / 9;
 	temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
