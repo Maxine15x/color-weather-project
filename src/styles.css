@@ -23,9 +23,9 @@ li:first-letter {
 }
 
 .container {
-	max-width: 70%;
+	max-width: 950px;
 	margin: 20px auto;
-	padding: 20px;
+	padding: 25px;
 	border-radius: 20px;
 	box-shadow: 5px 2px 2px #9adbe8;
 	background: linear-gradient(
@@ -61,11 +61,11 @@ li:first-letter {
 	font-size: 82px;
 }
 
-.units {
+.unit {
 	color: #6f4886;
 	position: relative;
-	font-size: 14px;
-	top: -44px;
+	font-size: 28px;
+	top: -36px;
 	left: 8px;
 	cursor: default;
 }

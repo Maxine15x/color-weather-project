@@ -67,37 +67,11 @@ function currentLocation(event) {
 	navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function convertCelsius(event) {
-	event.preventDefault();
-	celsiusLink.classList.add("active");
-	fahrenheitLink.classList.remove("active");
-	let temperatureElement = document.querySelector("#temperature");
-	temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-function convertFahrenheit(event) {
-	event.preventDefault();
-	let temperatureElement = document.querySelector("#temperature");
-
-	celsiusLink.classList.remove("active");
-	fahrenheitLink.classList.add("active");
-	let fahrenheitTemperature = ((celsiusTemperature - 32) * 5) / 9;
-	temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
 let dateType = document.querySelector("#date");
 let currentTime = new Date();
 dateType.innerHTML = currentDate(currentTime);
 
 let searchForm = document.querySelector("#find-city");
 searchForm.addEventListener("submit", searchEngine);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertCelsius);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertFahrenheit);
 
 searchCity("Clearwater");
