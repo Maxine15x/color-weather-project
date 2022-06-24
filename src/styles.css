@@ -27,7 +27,7 @@ li:first-letter {
 	margin: 20px auto;
 	padding: 25px;
 	border-radius: 20px;
-	box-shadow: 5px 2px 2px #9adbe8;
+	box-shadow: 5px 5px 5px #0e8fa8;
 	background: linear-gradient(
 		122.3deg,
 		rgb(111, 71, 133) 14.6%,
@@ -70,29 +70,31 @@ li:first-letter {
 	cursor: default;
 }
 
-.col {
-	box-shadow: 0px 2px 2px 0px rgb(232, 129, 166);
-	border: 1px solid rgb(190, 61, 192);
+.forcast-overview {
+	box-shadow: 8px 5px 5px rgb(111, 71, 133);
+	border: solid rgb(198, 198, 192);
 	border-radius: 18px;
-}
-
-.col img {
-	display: block;
-	position: relative;
-	left: 32px;
-}
-
-.card-title {
-	color: #3f3b3b;
-	font-size: 20px;
 	text-align: center;
-	margin: 0 auto;
-	padding: 8px;
+	width: 150px;
+	margin: 0;
+	padding: 1em;
+}
+
+.forecast-day {
+	color: rgb(230, 230, 153);
+	font-weight: bold;
+	font-size: 22px;
 }
 
 .current-temp {
-	color: #3f3b3b;
-	font-size: 15px;
-	padding: 2px 8px 10px 8px;
-	text-align: center;
+	color: #1c8fa8;
+}
+
+.current-temp .forecast-temperature-max {
+	font-size: 18px;
+	margin-left: 10px;
+}
+.current-temp .forecast-temperature-min {
+	font-size: 16px;
+	opacity: 0.5;
 }
