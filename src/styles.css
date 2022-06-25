@@ -86,15 +86,15 @@ li:first-letter {
 	font-size: 22px;
 }
 
-.current-temp {
+.current-forest-temperatures {
 	color: #1c8fa8;
 }
 
-.current-temp .forecast-temperature-max {
+.current-forest-temperatures .forecast-temperature-max {
 	font-size: 18px;
 	margin-left: 10px;
 }
-.current-temp .forecast-temperature-min {
+.current-forest-temperatures .forecast-temperature-min {
 	font-size: 16px;
 	opacity: 0.5;
 }

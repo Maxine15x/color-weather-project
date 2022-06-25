@@ -44,30 +44,18 @@
 						<span class="unit">°F</span>
 					</div>
 				</div>
-				<div class="description">
+				<div class="overview">
 					<div class="col-12">
 						<ul>
-							<li>Last Updated: <span id="date"></span></li>
+							<li><span id="date"></span></li>
 							<li><span id="description"></span></li>
+							<li>Feels like: <span id="feels_like"></span>°</li>
 							<li>Humidity: <span id="humidity"></span>%</li>
-							<li>Wind: <span id="wind"></span> km/h</li>
+							<li>Wind speed: <span id="wind"></span> mph</li>
 						</ul>
 					</div>
 				</div>
-				<div class="col">
-					<div class="forcast-overview">
-						<div class="forecast-day">Monday</div>
-						<img
-							src="https://openweathermap.org/img/wn/10d@2x.png"
-							alt="Cloudy"
-							id="icon"
-						/>
-						<div class="current-temp">
-							<span class="forecast-temperature-max">90°</span>
-							<span class="forecast-temperature-min">72°</span>
-						</div>
-					</div>
-				</div>
+				<div class="forcast-overview" id="forecast"></div>
 			</div>
 			<small
 				><a
