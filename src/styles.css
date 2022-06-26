@@ -68,15 +68,13 @@ li:first-letter {
 	cursor: default;
 }
 
-.forcast-overview {
-	display: flex;
+.forecast-overview {
 	box-shadow: 8px 5px 5px rgb(111, 71, 133);
-	border: solid rgb(198, 198, 192);
+	border: 1px solid rgb(198, 198, 192);
 	border-radius: 18px;
-	position: relative;
 	text-align: center;
-	margin: 10px;
-	padding: 10px;
+	margin: 10px auto;
+	padding: 25px;
 }
 
 .forecast-day {
@@ -85,11 +83,11 @@ li:first-letter {
 	font-size: 22px;
 }
 
-.current-forest-temperatures {
+.current-forecast-temperatures {
 	color: #6f4886;
 }
 
-.current-forest-temperatures .forecast-temperature-max {
+.current-forecast-temperatures .forecast-temperature-max {
 	font-size: 18px;
 	margin-left: 10px;
 }

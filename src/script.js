@@ -43,7 +43,7 @@ function showForecast(response) {
 							src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
 							alt=""
 						/>
-						<div class="current-forest-temperatures">
+						<div class="current-forecast-temperatures">
 							<span class="forecast-temperature-max"> ${Math.round(
 								forecastDay.temp.max
 							)}° </span>
@@ -51,7 +51,6 @@ function showForecast(response) {
 								forecastDay.temp.min
 							)}° </span>
 						</div>
-					</div>
 					</div>`;
 		}
 	});
