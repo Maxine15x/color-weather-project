@@ -12,8 +12,7 @@ h1 {
 
 li {
 	color: #d66b92;
-	font-size: 15px;
-	line-height: 24px;
+	font-size: 16px;
 	list-style: none;
 	text-align: right;
 }
@@ -27,7 +26,7 @@ li:first-letter {
 	margin: 20px auto;
 	padding: 25px;
 	border-radius: 20px;
-	box-shadow: 5px 5px 5px #0e8fa8;
+	box-shadow: 5px 5px 5px rgb(14, 143, 168);
 	background: linear-gradient(
 		122.3deg,
 		rgb(111, 71, 133) 14.6%,
@@ -47,7 +46,6 @@ li:first-letter {
 }
 
 .weather-temperature img {
-	display: inline-block;
 	position: relative;
 	margin-right: -10px;
 	top: -22px;
@@ -64,30 +62,31 @@ li:first-letter {
 .unit {
 	color: #6f4886;
 	position: relative;
-	font-size: 28px;
+	font-size: 30px;
 	top: -36px;
 	left: 8px;
 	cursor: default;
 }
 
 .forcast-overview {
+	display: flex;
 	box-shadow: 8px 5px 5px rgb(111, 71, 133);
 	border: solid rgb(198, 198, 192);
 	border-radius: 18px;
+	position: relative;
 	text-align: center;
-	width: 150px;
-	margin: 0;
-	padding: 1em;
+	margin: 10px;
+	padding: 10px;
 }
 
 .forecast-day {
-	color: rgb(230, 230, 153);
+	color: #0e8fa8;
 	font-weight: bold;
 	font-size: 22px;
 }
 
 .current-forest-temperatures {
-	color: #1c8fa8;
+	color: #6f4886;
 }
 
 .current-forest-temperatures .forecast-temperature-max {
